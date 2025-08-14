@@ -1,5 +1,4 @@
 import activitiesData from "@/services/mockData/activities.json";
-
 let activities = [...activitiesData];
 
 const activityService = {
@@ -19,12 +18,20 @@ const activityService = {
     return { ...activity };
   },
 
-  getByFieldId: async (fieldId) => {
+getByFieldId: async (fieldId) => {
     await activityService.delay();
     return activities
       .filter(activity => activity.fieldId === fieldId.toString())
       .map(activity => ({ ...activity }));
   },
+
+  getRecentActivities: async (count = 10) => {
+    await activityService.delay();
+    return activities
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, count)
+      .map(activity => ({ ...activity }));
+},
 
   create: async (activityData) => {
     await activityService.delay();
