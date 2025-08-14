@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "varietyName": "Pioneer P1234",
+    "cropType": "Corn",
+    "cycleDuration": 120,
+    "plantingSeason": "Spring",
+    "description": "High-yield hybrid corn variety with excellent drought tolerance",
+    "plantingRequirements": {
+      "soilType": "Well-drained loam",
+      "temperature": "60-85°F",
+      "rainfall": "20-25 inches",
+      "spacing": "6-8 inches between plants"
+    },
+    "createdDate": "2024-01-15"
+  },
+  {
+    "Id": 2,
+    "varietyName": "Roundup Ready 2",
+    "cropType": "Soybeans",
+    "cycleDuration": 100,
+    "plantingSeason": "Spring",
+    "description": "Genetically modified soybean variety with herbicide resistance",
+    "plantingRequirements": {
+      "soilType": "Well-drained fertile soil",
+      "temperature": "65-75°F",
+      "rainfall": "15-20 inches",
+      "spacing": "1-2 inches between plants"
+    },
+    "createdDate": "2024-01-20"
+  },
+  {
+    "Id": 3,
+    "varietyName": "Winter King",
+    "cropType": "Wheat",
+    "cycleDuration": 240,
+    "plantingSeason": "Fall",
+    "description": "Winter wheat variety with excellent cold hardiness and disease resistance",
+    "plantingRequirements": {
+      "soilType": "Clay or loam soil",
+      "temperature": "32-70°F",
+      "rainfall": "12-18 inches",
+      "spacing": "1 inch between plants"
+    },
+    "createdDate": "2024-02-01"
+  },
+  {
+    "Id": 4,
+    "varietyName": "Premium Cut",
+    "cropType": "Alfalfa",
+    "cycleDuration": 365,
+    "plantingSeason": "Spring",
+    "description": "Perennial alfalfa variety for high-quality forage production",
+    "plantingRequirements": {
+      "soilType": "Well-drained alkaline soil",
+      "temperature": "55-85°F",
+      "rainfall": "18-24 inches",
+      "spacing": "6-12 inches between plants"
+    },
+    "createdDate": "2024-02-10"
+  }
+]

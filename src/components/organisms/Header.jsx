@@ -18,7 +18,7 @@ const Header = ({ title, description, action, className, ...props }) => {
           )}
         </div>
         
-        {action && (
+{action && (
           <div className="flex items-center space-x-4">
             {action}
           </div>
