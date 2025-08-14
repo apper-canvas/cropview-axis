@@ -17,9 +17,11 @@ const FieldGrid = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-  const [editingField, setEditingField] = useState(null);
+const [editingField, setEditingField] = useState(null);
   const [selectedField, setSelectedField] = useState(null);
   const [fieldActivities, setFieldActivities] = useState([]);
+  const [activitiesLoading, setActivitiesLoading] = useState(false);
+
   const loadFields = async () => {
     try {
       setLoading(true);
@@ -33,6 +35,30 @@ const [isAddModalOpen, setIsAddModalOpen] = useState(false);
       setLoading(false);
     }
   };
+
+  const loadFieldActivities = async (fieldId) => {
+    try {
+      setActivitiesLoading(true);
+      const activities = await activityService.getAll();
+      const fieldSpecificActivities = activities
+        .filter(activity => activity.fieldId === fieldId.toString())
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .slice(0, 5); // Show last 5 activities
+      setFieldActivities(fieldSpecificActivities);
+    } catch (error) {
+      console.error("Error loading field activities:", error);
+      setFieldActivities([]);
+    } finally {
+      setActivitiesLoading(false);
+    }
+  };
+
+  // Load field activities when a field is selected
+  useEffect(() => {
+    if (selectedField) {
+      loadFieldActivities(selectedField.Id);
+    }
+  }, [selectedField]);
 
   useEffect(() => {
     loadFields();
@@ -282,26 +308,6 @@ const [isAddModalOpen, setIsAddModalOpen] = useState(false);
     </>
   );
 
-  // Load field activities when a field is selected
-  useEffect(() => {
-    if (selectedField) {
-      loadFieldActivities(selectedField.Id);
-    }
-  }, [selectedField]);
-
-  const loadFieldActivities = async (fieldId) => {
-    try {
-      const activities = await activityService.getAll();
-      const fieldSpecificActivities = activities
-        .filter(activity => activity.fieldId === fieldId.toString())
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, 5); // Show last 5 activities
-      setFieldActivities(fieldSpecificActivities);
-    } catch (error) {
-      console.error("Error loading field activities:", error);
-      setFieldActivities([]);
-    }
-  };
 };
 
 export default FieldGrid;
