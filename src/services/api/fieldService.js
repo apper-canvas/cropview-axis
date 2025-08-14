@@ -20,7 +20,7 @@ const fieldService = {
     return { ...field };
   },
 
-  create: async (fieldData) => {
+create: async (fieldData) => {
     await fieldService.delay();
     
     // Generate new ID
@@ -32,6 +32,9 @@ const fieldService = {
       cropType: fieldData.cropType,
       status: "planted",
       plantingDate: fieldData.plantingDate,
+      expectedHarvest: fieldData.expectedHarvest || null,
+      soilType: fieldData.soilType || null,
+      irrigationMethod: fieldData.irrigationMethod || null,
       lastActivity: new Date().toISOString().split("T")[0],
       notes: fieldData.notes || ""
     };
@@ -40,7 +43,7 @@ const fieldService = {
     return { ...newField };
   },
 
-  update: async (id, fieldData) => {
+update: async (id, fieldData) => {
     await fieldService.delay();
     
     const index = fields.findIndex(f => f.Id === parseInt(id));
@@ -48,7 +51,15 @@ const fieldService = {
       throw new Error("Field not found");
     }
     
-    fields[index] = { ...fields[index], ...fieldData };
+    // Update with support for new fields
+    const updatedData = {
+      ...fieldData,
+      expectedHarvest: fieldData.expectedHarvest || null,
+      soilType: fieldData.soilType || null,
+      irrigationMethod: fieldData.irrigationMethod || null
+    };
+    
+    fields[index] = { ...fields[index], ...updatedData };
     return { ...fields[index] };
   },
 
