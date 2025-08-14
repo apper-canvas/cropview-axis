@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Modal from "@/components/atoms/Modal";
 import Button from "@/components/atoms/Button";
 import { Card, CardContent } from "@/components/atoms/Card";
@@ -7,7 +8,6 @@ import ApperIcon from "@/components/ApperIcon";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import fieldService from "@/services/api/fieldService";
-
 const getCropIcon = (cropType) => {
   const iconMap = {
     Corn: "Wheat",
@@ -33,10 +33,15 @@ const getSeasonColor = (season) => {
 };
 
 const CropDetailModal = ({ crop, isOpen, onClose, onEdit }) => {
+  const navigate = useNavigate();
   const [associatedFields, setAssociatedFields] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const handleFieldClick = (fieldId) => {
+    onClose(); // Close the modal first
+    navigate(`/fields/${fieldId}`);
+  };
   useEffect(() => {
     if (isOpen && crop) {
       loadAssociatedFields();
@@ -203,25 +208,29 @@ const CropDetailModal = ({ crop, isOpen, onClose, onEdit }) => {
                 <p className="text-sm mt-1">Fields with {crop.cropType} will appear here</p>
               </div>
             ) : (
-              <div className="space-y-3">
+<div className="space-y-3">
                 {associatedFields.map(field => (
                   <div 
                     key={field.Id}
-                    className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
+                    className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group"
+                    onClick={() => handleFieldClick(field.Id)}
                   >
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-white rounded-lg">
-                        <ApperIcon name="MapPin" className="w-4 h-4 text-fresh-green" />
+                      <div className="p-2 bg-white rounded-lg group-hover:bg-fresh-green group-hover:text-white transition-colors">
+                        <ApperIcon name="MapPin" className="w-4 h-4 text-fresh-green group-hover:text-white" />
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">{field.name}</p>
+                        <p className="font-medium text-gray-900 group-hover:text-fresh-green transition-colors">{field.name}</p>
                         <p className="text-sm text-gray-500">{field.size} acres</p>
                       </div>
                     </div>
                     <div className="text-right">
-                      <Badge variant="secondary" className="text-xs">
-                        {field.status}
-                      </Badge>
+                      <div className="flex items-center space-x-2">
+                        <Badge variant="secondary" className="text-xs">
+                          {field.status}
+                        </Badge>
+                        <ApperIcon name="ExternalLink" className="w-4 h-4 text-gray-400 group-hover:text-fresh-green transition-colors" />
+                      </div>
                       <p className="text-xs text-gray-500 mt-1">
                         Planted: {new Date(field.plantingDate).toLocaleDateString()}
                       </p>

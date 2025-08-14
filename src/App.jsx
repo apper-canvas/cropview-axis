@@ -14,8 +14,9 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Layout>
           <Routes>
-            <Route path="/" element={<FarmOverviewPage />} />
+<Route path="/" element={<FarmOverviewPage />} />
             <Route path="/fields" element={<FieldsPage />} />
+            <Route path="/fields/:fieldId" element={<FieldsPage />} />
             <Route path="/crops" element={<CropsPage />} />
             <Route path="/equipment" element={<EquipmentPage />} />
             <Route path="/reports" element={<ReportsPage />} />
