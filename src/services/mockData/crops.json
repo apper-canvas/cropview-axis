@@ -1,32 +1,86 @@
 [
   {
     "Id": 1,
-    "varietyName": "Pioneer P1234",
+    "varietyName": "Golden Harvest 2500",
     "cropType": "Corn",
     "cycleDuration": 120,
     "plantingSeason": "Spring",
-    "description": "High-yield hybrid corn variety with excellent drought tolerance",
+    "description": "High-yield corn variety with excellent drought resistance and strong stalks.",
     "plantingRequirements": {
       "soilType": "Well-drained loam",
       "temperature": "60-85°F",
       "rainfall": "20-25 inches",
-      "spacing": "6-8 inches between plants"
+      "spacing": "6-8 inches apart"
     },
+    "growthStages": [
+      {
+        "name": "Seed",
+        "duration": 7,
+        "description": "Corn kernel absorbs moisture and begins to swell. Root emergence occurs within 5-7 days under optimal conditions."
+      },
+      {
+        "name": "Germination",
+        "duration": 14,
+        "description": "Seedling emerges from soil with first leaves (coleoptile). Root system establishes and first true leaves appear."
+      },
+      {
+        "name": "Vegetative",
+        "duration": 65,
+        "description": "Rapid growth phase with leaf development and stalk elongation. Plants reach full height and develop extensive root systems."
+      },
+      {
+        "name": "Flowering",
+        "duration": 21,
+        "description": "Tassels emerge and shed pollen. Silks appear on ears and pollination occurs. Critical period for yield determination."
+      },
+      {
+        "name": "Maturity",
+        "duration": 13,
+        "description": "Kernels fill and mature. Moisture content decreases to harvest levels (15-20%). Plants reach physiological maturity."
+      }
+    ],
     "createdDate": "2024-01-15"
   },
   {
     "Id": 2,
-    "varietyName": "Roundup Ready 2",
+    "varietyName": "Pioneer Elite",
     "cropType": "Soybeans",
-    "cycleDuration": 100,
+    "cycleDuration": 110,
     "plantingSeason": "Spring",
-    "description": "Genetically modified soybean variety with herbicide resistance",
+    "description": "Premium soybean variety with high protein content and disease resistance.",
     "plantingRequirements": {
-      "soilType": "Well-drained fertile soil",
-      "temperature": "65-75°F",
+      "soilType": "Rich, fertile soil",
+      "temperature": "65-80°F",
       "rainfall": "15-20 inches",
-      "spacing": "1-2 inches between plants"
+      "spacing": "4-6 inches apart"
     },
+    "growthStages": [
+      {
+        "name": "Seed",
+        "duration": 5,
+        "description": "Soybean seed imbibes water and begins germination process. Radical emergence occurs within 3-5 days."
+      },
+      {
+        "name": "Germination",
+        "duration": 10,
+        "description": "Cotyledons emerge above soil surface. First true leaves unfold and photosynthesis begins."
+      },
+      {
+        "name": "Vegetative",
+        "duration": 55,
+        "description": "Node development and trifoliate leaf formation. Branching occurs and nitrogen fixation begins through root nodules."
+      },
+      {
+        "name": "Flowering",
+        "duration": 30,
+        "description": "Flower clusters form at leaf axils. Self-pollination occurs and pod development begins."
+      },
+      {
+        "name": "Maturity",
+        "duration": 10,
+        "description": "Pods fill with mature beans. Leaves yellow and drop as plants prepare for harvest."
+      }
+    ],
     "createdDate": "2024-01-20"
   },
   {
@@ -35,28 +89,250 @@
     "cropType": "Wheat",
     "cycleDuration": 240,
     "plantingSeason": "Fall",
-    "description": "Winter wheat variety with excellent cold hardiness and disease resistance",
+    "description": "Winter wheat variety with excellent cold tolerance and high gluten content.",
     "plantingRequirements": {
-      "soilType": "Clay or loam soil",
-      "temperature": "32-70°F",
+      "soilType": "Clay loam",
+      "temperature": "32-75°F",
       "rainfall": "12-18 inches",
-      "spacing": "1 inch between plants"
+      "spacing": "1-2 inches apart"
     },
+    "growthStages": [
+      {
+        "name": "Seed",
+        "duration": 10,
+        "description": "Wheat seed germinates in cool fall conditions. Primary root and shoot development begins."
+      },
+      {
+        "name": "Germination",
+        "duration": 20,
+        "description": "First leaves emerge and tillering begins. Plant establishes crown roots before winter dormancy."
+      },
+      {
+        "name": "Vegetative",
+        "duration": 150,
+        "description": "Winter dormancy period followed by spring growth resumption. Stem elongation and additional tillering occur."
+      },
+      {
+        "name": "Flowering",
+        "duration": 35,
+        "description": "Heading occurs as flower spikes emerge. Pollination and grain formation begin during this critical period."
+      },
+      {
+        "name": "Maturity",
+        "duration": 25,
+        "description": "Grain filling and ripening phase. Moisture content decreases and grains harden for harvest readiness."
+      }
+    ],
     "createdDate": "2024-02-01"
   },
   {
     "Id": 4,
-    "varietyName": "Premium Cut",
+    "varietyName": "Supreme Quality",
     "cropType": "Alfalfa",
-    "cycleDuration": 365,
+    "cycleDuration": 180,
     "plantingSeason": "Spring",
-    "description": "Perennial alfalfa variety for high-quality forage production",
+    "description": "High-quality alfalfa with excellent hay production and protein levels.",
     "plantingRequirements": {
-      "soilType": "Well-drained alkaline soil",
-      "temperature": "55-85°F",
+      "soilType": "Deep, well-drained",
+      "temperature": "60-85°F",
       "rainfall": "18-24 inches",
-      "spacing": "6-12 inches between plants"
+      "spacing": "8-12 pounds per acre"
     },
+    "growthStages": [
+      {
+        "name": "Seed",
+        "duration": 7,
+        "description": "Small alfalfa seeds require adequate moisture for germination. Root development is crucial for establishment."
+      },
+      {
+        "name": "Germination",
+        "duration": 21,
+        "description": "Seedlings develop first true leaves. Taproot begins deep penetration into soil layers."
+      },
+      {
+        "name": "Vegetative",
+        "duration": 120,
+        "description": "Continuous growth with multiple harvests possible. Crown development and extensive root system establishment."
+      },
+      {
+        "name": "Flowering",
+        "duration": 25,
+        "description": "Purple flowers appear in clusters. Peak nutritional value occurs just before full bloom."
+      },
+      {
+        "name": "Maturity",
+        "duration": 7,
+        "description": "Seed pods develop if allowed to mature. Plants prepare for dormancy or regrowth cycle."
+      }
+    ],
     "createdDate": "2024-02-10"
+  },
+  {
+    "Id": 5,
+    "varietyName": "Harvest Gold",
+    "cropType": "Barley",
+    "cycleDuration": 90,
+    "plantingSeason": "Spring",
+    "description": "Fast-growing barley variety ideal for brewing and livestock feed.",
+    "plantingRequirements": {
+      "soilType": "Well-drained sandy loam",
+      "temperature": "55-70°F",
+      "rainfall": "12-16 inches",
+      "spacing": "1-1.5 inches apart"
+    },
+    "growthStages": [
+      {
+        "name": "Seed",
+        "duration": 5,
+        "description": "Barley grain absorbs moisture rapidly. Quick germination in cool spring conditions."
+      },
+      {
+        "name": "Germination",
+        "duration": 10,
+        "description": "First leaves emerge and tillering begins early. Root system establishes quickly in favorable conditions."
+      },
+      {
+        "name": "Vegetative",
+        "duration": 45,
+        "description": "Rapid vegetative growth with multiple tillers. Plants develop strong stems and extensive leaf area."
+      },
+      {
+        "name": "Flowering",
+        "duration": 20,
+        "description": "Heads emerge and flowering occurs. Critical period for grain number determination."
+      },
+      {
+        "name": "Maturity",
+        "duration": 10,
+        "description": "Grain filling and ripening complete. Awns (if present) dry and heads become golden for harvest."
+      }
+    ],
+    "createdDate": "2024-02-15"
+  },
+  {
+    "Id": 6,
+    "varietyName": "Sunny Delight",
+    "cropType": "Sunflowers",
+    "cycleDuration": 100,
+    "plantingSeason": "Summer",
+    "description": "Large-head sunflower variety with high oil content and bird resistance.",
+    "plantingRequirements": {
+      "soilType": "Well-drained soil",
+      "temperature": "70-85°F",
+      "rainfall": "16-20 inches",
+      "spacing": "12-18 inches apart"
+    },
+    "growthStages": [
+      {
+        "name": "Seed",
+        "duration": 7,
+        "description": "Large sunflower seeds germinate in warm summer soil. Substantial energy reserves support early growth."
+      },
+      {
+        "name": "Germination",
+        "duration": 14,
+        "description": "Cotyledons emerge followed by first true leaves. Strong taproot development begins immediately."
+      },
+      {
+        "name": "Vegetative",
+        "duration": 49,
+        "description": "Rapid height gain and large leaf development. Stem thickens to support eventual large flower head."
+      },
+      {
+        "name": "Flowering",
+        "duration": 21,
+        "description": "Large flower head develops with thousands of individual flowers. Tracking sun movement (heliotropism) occurs."
+      },
+      {
+        "name": "Maturity",
+        "duration": 9,
+        "description": "Seeds develop and mature in the head. Oil content reaches maximum and heads face downward."
+      }
+    ],
+    "createdDate": "2024-02-20"
+  },
+  {
+    "Id": 7,
+    "varietyName": "Morning Glory",
+    "cropType": "Oats",
+    "cycleDuration": 85,
+    "plantingSeason": "Spring",
+    "description": "High-yielding oat variety with excellent grain quality and lodging resistance.",
+    "plantingRequirements": {
+      "soilType": "Fertile, well-drained",
+      "temperature": "50-70°F",
+      "rainfall": "14-18 inches",
+      "spacing": "1-1.5 inches apart"
+    },
+    "growthStages": [
+      {
+        "name": "Seed",
+        "duration": 5,
+        "description": "Oat seeds germinate well in cool, moist spring conditions. Quick emergence is typical."
+      },
+      {
+        "name": "Germination",
+        "duration": 12,
+        "description": "First leaves appear and tillering begins. Plants establish strong root systems early."
+      },
+      {
+        "name": "Vegetative",
+        "duration": 40,
+        "description": "Vegetative growth with tiller development. Plants remain relatively short with broad leaves."
+      },
+      {
+        "name": "Flowering",
+        "duration": 18,
+        "description": "Open panicle heads emerge with pendant flowers. Wind pollination occurs during this phase."
+      },
+      {
+        "name": "Maturity",
+        "duration": 10,
+        "description": "Grain filling completes and oats ripen. Hulled grains develop characteristic oat appearance."
+      }
+    ],
+    "createdDate": "2024-02-25"
+  },
+  {
+    "Id": 8,
+    "varietyName": "Jasmine Premium",
+    "cropType": "Rice",
+    "cycleDuration": 130,
+    "plantingSeason": "Spring",
+    "description": "Aromatic rice variety with excellent cooking quality and disease resistance.",
+    "plantingRequirements": {
+      "soilType": "Clay soil with good water retention",
+      "temperature": "75-85°F",
+      "rainfall": "40-60 inches",
+      "spacing": "6-8 inches apart"
+    },
+    "growthStages": [
+      {
+        "name": "Seed",
+        "duration": 10,
+        "description": "Rice seeds germinate in flooded or very moist conditions. Pre-germination soaking may be used."
+      },
+      {
+        "name": "Germination",
+        "duration": 20,
+        "description": "Seedlings develop in nursery beds or direct seeding. Strong root systems adapt to flooded conditions."
+      },
+      {
+        "name": "Vegetative",
+        "duration": 70,
+        "description": "Tillering and stem elongation in flooded fields. Plants develop ability to transport oxygen to roots."
+      },
+      {
+        "name": "Flowering",
+        "duration": 20,
+        "description": "Panicles emerge above water with small flowers. Self-pollination occurs and grain formation begins."
+      },
+      {
+        "name": "Maturity",
+        "duration": 10,
+        "description": "Grains mature and fields are drained. Rice reaches optimal moisture content for harvest."
+      }
+    ],
+    "createdDate": "2024-03-01"
   }
 ]

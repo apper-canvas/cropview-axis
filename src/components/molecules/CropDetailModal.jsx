@@ -31,6 +31,7 @@ const getSeasonColor = (season) => {
   };
   return colorMap[season] || "bg-gray-100 text-gray-800";
 };
+import GrowthTimeline from '@/components/molecules/GrowthTimeline';
 
 const CropDetailModal = ({ crop, isOpen, onClose, onEdit }) => {
   const navigate = useNavigate();
@@ -151,7 +152,13 @@ const CropDetailModal = ({ crop, isOpen, onClose, onEdit }) => {
               </div>
             </CardContent>
           </Card>
-        </div>
+</div>
+
+        {/* Growth Stages Timeline */}
+        <GrowthTimeline 
+          growthStages={crop.growthStages} 
+          className="mb-6"
+        />
 
         {/* Description */}
         {crop.description && (
