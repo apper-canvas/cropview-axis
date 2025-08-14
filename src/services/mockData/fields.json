@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "name": "North Field",
+    "size": 45.2,
+    "cropType": "Corn",
+    "status": "planted",
+    "plantingDate": "2024-04-15",
+    "lastActivity": "2024-10-15",
+    "notes": "High yield variety planted with precision planting"
+  },
+  {
+    "Id": 2,
+    "name": "South Pasture",
+    "size": 32.8,
+    "cropType": "Soybeans",
+    "status": "harvested",
+    "plantingDate": "2024-05-10",
+    "lastActivity": "2024-09-28",
+    "notes": "Excellent drainage, consistently high yields"
+  },
+  {
+    "Id": 3,
+    "name": "East Quarter",
+    "size": 28.5,
+    "cropType": "Wheat",
+    "status": "planted",
+    "plantingDate": "2024-09-20",
+    "lastActivity": "2024-10-12",
+    "notes": "Winter wheat variety, expecting spring harvest"
+  },
+  {
+    "Id": 4,
+    "name": "West Bottom",
+    "size": 18.7,
+    "cropType": "Alfalfa",
+    "status": "planted",
+    "plantingDate": "2024-03-25",
+    "lastActivity": "2024-08-15",
+    "notes": "Perennial crop, third cutting completed"
+  },
+  {
+    "Id": 5,
+    "name": "Hill Top",
+    "size": 22.3,
+    "cropType": "Barley",
+    "status": "fallow",
+    "plantingDate": "2024-03-01",
+    "lastActivity": "2024-07-20",
+    "notes": "Resting field for soil improvement"
+  },
+  {
+    "Id": 6,
+    "name": "Creek Side",
+    "size": 15.6,
+    "cropType": "Sunflowers",
+    "status": "harvested",
+    "plantingDate": "2024-05-15",
+    "lastActivity": "2024-09-10",
+    "notes": "Specialty crop with direct market sales"
+  },
+  {
+    "Id": 7,
+    "name": "Center Pivot",
+    "size": 38.9,
+    "cropType": "Corn",
+    "status": "planted",
+    "plantingDate": "2024-04-20",
+    "lastActivity": "2024-10-08",
+    "notes": "Irrigated field with center pivot system"
+  },
+  {
+    "Id": 8,
+    "name": "Back Forty",
+    "size": 41.2,
+    "cropType": "Soybeans",
+    "status": "planted",
+    "plantingDate": "2024-05-05",
+    "lastActivity": "2024-10-01",
+    "notes": "Traditional field with good organic matter"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "Id": 1,
+    "fieldId": "1",
+    "type": "Harvest",
+    "date": "2024-10-15",
+    "description": "Corn harvest completed - 180 bu/acre yield"
+  },
+  {
+    "Id": 2,
+    "fieldId": "3",
+    "type": "Fertilizing",
+    "date": "2024-10-12",
+    "description": "Applied winter fertilizer blend"
+  },
+  {
+    "Id": 3,
+    "fieldId": "7",
+    "type": "Irrigation",
+    "date": "2024-10-08",
+    "description": "Center pivot irrigation system maintenance"
+  },
+  {
+    "Id": 4,
+    "fieldId": "8",
+    "type": "Soil Test",
+    "date": "2024-10-01",
+    "description": "Annual soil sampling completed"
+  },
+  {
+    "Id": 5,
+    "fieldId": "2",
+    "type": "Harvest",
+    "date": "2024-09-28",
+    "description": "Soybean harvest - 58 bu/acre average"
+  },
+  {
+    "Id": 6,
+    "fieldId": "3",
+    "type": "Planting",
+    "date": "2024-09-20",
+    "description": "Winter wheat seeded at 120 lbs/acre"
+  },
+  {
+    "Id": 7,
+    "fieldId": "6",
+    "type": "Harvest",
+    "date": "2024-09-10",
+    "description": "Sunflower harvest completed"
+  },
+  {
+    "Id": 8,
+    "fieldId": "4",
+    "type": "Cutting",
+    "date": "2024-08-15",
+    "description": "Third alfalfa cutting - 2.8 tons/acre"
+  }
+]
